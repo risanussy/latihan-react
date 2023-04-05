@@ -1,0 +1,96 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #219F94;
+  padding: 80px;
+  color: #F2F5C8;
+}
+
+h1 {
+  font-size: 62px;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+.sub-main {
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.kanan, .kiri {
+  width: 48% ;
+}
+
+form {
+  width: 60%;
+  height: 300px;
+  background-color: #F2F5C8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid #219F94;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 28px;
+  text-align: center;
+  color: #219F94;
+  padding: 8px;
+  font-weight: 200;
+}
+
+::placeholder {
+  font-weight: 200;
+  color: #219F94;
+}
+
+button {
+  width: 60%;
+  padding: 10px;
+  border:none;
+  background-color: #219F94;
+  color: #F2F5C8;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px;
+  width: 200px;
+  height: 185px;
+  border: 2px solid #F2F5C8;
+}
+
+.bolder {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.btn {
+  width: 48%;
+  padding: 10px;
+  background-color: #F2F5C8;
+  color: #219F94;
+  cursor: pointer;
+}
+
+.btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
