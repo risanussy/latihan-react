@@ -1,7 +1,26 @@
 import '../assets/css/App.css'
 import Card from "../components/Card"
 
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+
 let App = () => {
+    let [list, setList] = useState([])
+
+    // lifecycle-nya react
+    // react - mount
+    // react - update
+    // react - unmount
+
+    useEffect(() => {
+        axios.get('https://reqres.in/api/users?page=2')
+            .then(res => {
+                let data = res.data.data
+
+                setList(data)
+            })
+    }, []);
+
     return (
         <>
             <div className="main">
@@ -22,7 +41,9 @@ let App = () => {
                     <div className="kanan">
                         <h2>Members.</h2><br /> 
                         <div className="cards">
-                            <Card />
+                            {list.map((member, index) => 
+                                <Card key={member.id} index={index} nd={member.first_name} nb={member.last_name} mail={member.email} />
+                            )}
                         </div> 
                     </div>
                 </div>
